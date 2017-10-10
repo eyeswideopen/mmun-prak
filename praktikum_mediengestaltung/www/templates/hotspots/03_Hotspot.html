@@ -1,0 +1,28 @@
+﻿<ion-view>
+  <ion-content ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+
+
+    <div class="water-text-wrapper">
+
+      <div ng-hide="isInExibition">
+        <img src="img/high_res/Hotspot_03.jpg" alt="thumbnail"/>
+        <h1>Thjorsá, Island</h1>
+        <p>Im Quellgebiet der Thjorsa, des größten Flusses von Island, besteht der Boden aus dunklem Vulkangestein.
+          Moose und Gräser gehören zu den ersten Pflanzen, die den feuchten Untergrund besiedeln. Schwebstoffe im Wasser
+          verleihen manchen Seen die grünliche Farbe.</p>
+      </div>
+
+      <!--Hero element only visible while in Esibition-->
+      <div class="hero clearfix" ng-show="isInExibition">
+        <img src="img/high_res/Hotspot_03.jpg">
+        <h1>Thjorsá - Island</h1>
+      </div>
+
+
+      <h1>Puzzle</h1>
+      <image-puzzle image="img/high_res/Hotspot_03_Puzzlebild_Thjorsa.jpg"></image-puzzle>
+
+    </div>
+
+  </ion-content>
+</ion-view>

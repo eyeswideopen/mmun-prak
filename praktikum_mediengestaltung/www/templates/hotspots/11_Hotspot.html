@@ -1,0 +1,35 @@
+﻿<ion-view>
+  <ion-content ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+
+    <div class="water-text-wrapper">
+
+      <div ng-hide="isInExibition">
+        <img src="img/high_res/Hotspot_11.jpg" alt="thumbnail"/>
+        <h1>Malaspinagletscher, Alaska, USA</h1>
+        <p>Der Malaspinagletscher besteht aus mehreren, mit Moränenschutt beladenen Eisströmen, die aus verschiedenen
+          Gebirgstälern kriechen und sich dann Seite an Seite weiter talwärts schieben. Das ergibt, aus der Luft
+          gesehen,
+          ein Streifenmuster aus verschieden grauem und graubraunem Gesteinsschutt.</p>
+      </div>
+
+      <!--Hero element only visible while in Esibition-->
+      <div class="hero clearfix" ng-show="isInExibition">
+        <img src="img/high_res/Hotspot_11.jpg">
+        <h1>Malaspinagletscher, Alaska, USA</h1>
+      </div>
+
+
+      <h1>Schon gewusst?</h1>
+      <p>Woher kommt der viele Schutt auf dem Eis der Gletscher? Auch er wird vom Wasser verursacht – nämlich vom
+        Wasser, das in den Fels der Gebirge rund um die Gletscher eingesickert ist. Es sammelt sich in haarfeinen Rissen
+        im Gestein. Es kann, sobald die Temperaturen unter den Gefrierpunkt sinken, das Gestein sprengen. Denn dann wird
+        das Kluftwasser zu Eis. Bei der Umwandlung dehnt es sich aus und drückt gegen das Gestein, je kälter es wird,
+        desto stärker. Bei minus 10 Grad Celsius liegt der Druck bei 1.150 Kilogramm auf den Quadratzentimeter Fels, bei
+        minus 20 Grad Celsius sind es schon 2.000 Kilogramm. Die Folge: Der Fels wird mürbe und zerbricht allmählich.
+        Die Trümmer stürzen auf das Eis, das talwärts kriecht, und werden abtransportiert.</p>
+
+    </div>
+
+  </ion-content>
+</ion-view>
+

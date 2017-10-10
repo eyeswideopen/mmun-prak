@@ -1,0 +1,38 @@
+﻿<ion-view>
+  <ion-content ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+
+    <div class="water-text-wrapper">
+      <div ng-hide="isInExibition">
+
+        <img src="img/high_res/Hotspot_16.jpg" alt="thumbnail"/>
+        <h1>Lenadelta 01, Jakutien, Russland</h1>
+        <p>Braunes Moorwasser füllt die zahlreichen Tümpel in dieser Tundralandschaft, die im Lauf des Jahres ihre Farbe
+          wechselt. Im Winter ist sie weiß von Eis und Schnee, im Frühsommer, wenn Gräser, Kräuter und Moose wachsen,
+          wird sie grün, und im Herbst, wenn die Vegetation abstirbt, wird sie ockerbraun.</p>
+      </div>
+      <!--Hero element only visible while in Esibition-->
+      <div class="hero clearfix" ng-show="isInExibition">
+        <img src="img/high_res/Hotspot_16.jpg">
+        <h1>Lenadelta 01, Jakutien, Russland</h1>
+      </div>
+    </div>
+
+
+    <div class="water-text-wrapper">
+      <h1>Puzzle</h1>
+
+      <image-puzzle image="img/high_res/Hotspot_16_Puzzlebild_Lenadelta.jpg"></image-puzzle>
+
+    </div>
+
+    <div class="water-text-wrapper">
+
+      <h1>Schon gewusst?</h1>
+      <p>Weltweit sind mehr als 36 Millionen Quadratkilometer Boden das ganze Jahr über gefroren – das sind 25 Prozent
+        der Landoberfläche auf der Erde. Am tiefsten reicht der Dauerfrost auf der Nordhalbkugel in Zentral-Jakutien in
+        der russischen Arktis – nämlich 1.600 Meter tief.</p>
+
+    </div>
+
+  </ion-content>
+</ion-view>

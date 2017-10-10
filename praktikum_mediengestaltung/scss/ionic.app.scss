@@ -1,0 +1,379 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+//new custom font
+@font-face {
+  font-family: 'RalewayRegular';
+  src: url('../fonts/RalewayRegular.eot');
+  src: url('../fonts/RalewayRegular.eot') format('embedded-opentype'),
+  url('../fonts/RalewayRegular.woff2') format('woff2'),
+  url('../fonts/RalewayRegular.woff') format('woff'),
+  url('../fonts/RalewayRegular.ttf') format('truetype'),
+  url('../fonts/RalewayRegular.svg#RalewayRegular') format('svg');
+}
+
+.slider_image {
+  height: 100%;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+//water variables
+$border-color: #333;
+$element-border-color: transparent;
+
+$element-background-color: rgba(255, 255, 255, 0.1);
+$background: #000;
+$color: #fff;
+
+//
+//navigation and list views
+//
+.scroll-bar-indicator {
+  display: none;
+}
+
+.bar-dark {
+  background-color: $background !important;
+}
+
+.scroll-content {
+  background-color: $background;
+}
+
+.item-content {
+  background-color: $background !important;;
+  color: $color !important;
+  padding-top: 25px !important;
+}
+
+.item {
+  border-color: $border-color;
+  background-color: $background;
+  color: $color;
+}
+
+.activated {
+  background-color: $background !important;
+}
+
+.impressum {
+  opacity: 0.5;
+  left: 0;
+  right: 0;
+  top: -8px;
+  width: 100%;
+  position: fixed;
+  border: none;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin-right: 10px;
+}
+
+.navigation-header{
+  position: relative;
+  top: 50px;
+  color: #fff;
+
+  height: 50px;
+  width: 100%;
+  z-index: 99999;
+}
+
+//fixing android scroll bar
+.overflow-scroll{overflow-y:auto;}
+
+//
+//water audio
+//
+.water-audio {
+  .list-inset {
+    margin: 20px 15px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    background-color: $element-background-color;
+  }
+  .button {
+    color: #fff;
+  }
+  .item {
+    background-color: transparent;
+    color: $color;
+    border-color: $element-border-color;
+  }
+}
+
+.no-audio {
+  p {
+    white-space: normal;
+    margin-top: 10px;
+  }
+}
+
+//
+//text content
+//
+
+h1 {
+  text-align: center;
+}
+
+.quote {
+  font-size: 20px;
+  margin-bottom: 16px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.popup {
+  background-color: $element-background-color;
+}
+
+.water-text-wrapper {
+
+  h1, h2, h3, h4, h5 {
+    padding-left: 15px;
+  }
+
+  text-align: left;
+  margin-bottom: 16px;
+  //background-color: $element-background-color;
+  p {
+    font-family: "RalewayRegular";
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    padding: 16px;
+  }
+  h1 {
+    font-family: "RalewayRegular";
+    font-size: 24px;
+    font-weight: 200;
+    padding: 16px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  button {
+    font-family: "RalewayRegular";
+  }
+}
+
+//
+//IN EXIBITION HERO
+//
+.hero {
+  margin-bottom: 30px;
+  h1 {
+    //float: right;
+    margin-top: 22px;
+    margin-left: 125px;
+    text-align: left;
+  }
+  img {
+    height: 100px;
+    width: 100px;
+    -webkit-border-radius: 900px;
+    -moz-border-radius: 900px;
+    border-radius: 900px;
+    margin: 10px;
+    float: left;
+  }
+}
+
+//
+//QUIZ
+//
+.quiz {
+  .quiz_button {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 0px;
+    line-height: 29px;
+  }
+  .button_right_answer {
+    background-color: green !important;
+    border: none;
+  }
+  .button_wrong_answer {
+    background-color: red !important;
+    border: none;
+
+  }
+  .quiz_answered {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    line-height: 37px;
+  }
+  .answered_right,
+  .answered_wrong {
+    display: none;
+  }
+}
+
+//
+//HERO
+//
+
+.popup {
+  background-color: $background !important;
+  button {
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+  }
+}
+
+//
+//DEV
+//
+.todo {
+  font-size: 30px;
+  text-align: center;
+  color: yellow;
+}
+
+//
+//ZOOM PANE
+//
+.zoom-pane {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.zoom-pane .scroll {
+  min-height: 100% !important;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.zoom-pane img {
+  width: 100% !important;
+  vertical-align: middle !important;
+  image-rendering: auto;
+}
+
+.image-modal {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  background: black !important;
+}
+
+.image {
+  width: 100%;
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center, center;
+}
+
+//
+//FEEDBACK
+//
+.general_opinion {
+  width: 100%;
+  min-height: 100px;
+}
+
+.contact{
+  input{
+    color: $color;
+  }
+}
+
+.question {
+  text-align: center;
+  margin-top: 40px;
+  .explanation {
+    background: $background;
+    color: $color;
+    border: 1px solid $border-color;
+    padding: 5px;
+    width: 90%;
+    margin: 20px 5% !important;
+    min-height: 60px;
+  }
+}
+.feedbackButton{
+  margin-bottom: 0px !important;
+}
+.feedbackMessageWrapper{
+  text-align: center;
+}
+
+.loading_spinner {
+  text-align: center;
+  stroke: $color !important;
+}
+.item .badge {
+  margin-right: 40px;
+  top:21px !important;
+}
+
+.closestStateVisible{
+  top: 44px;
+  margin-bottom:100px;
+}
+
+.slider{
+  height:100%;
+}
+.slider-pager .slider-pager-page {
+  color: #fff;
+}

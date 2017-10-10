@@ -1,0 +1,88 @@
+
+body {
+  font-family: verdana, sans-serif;
+
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+.meta {
+  font-size: 0.6em;
+  display: none;
+}
+
+.board {
+  width: 300px;
+  height: 300px;
+  margin:0 auto;
+  /*padding:25px;*/
+  /*background-color:#333;*/
+  /*margin-top:1em;*/
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tile {
+  display: block;
+  width: 100px;
+  height: 100px;
+  float: left;
+/ / margin: 2.5 px;
+  background: url('../../img/move.png');
+
+  /*background-color:#eee;*/
+  line-height: 100px;
+  text-align: center;
+  background-image: url('../../img/high_res/Hotspot_10.jpg');
+  background-size:300px 300px; /*TODO: DYNAMIC SIZE*/
+}
+
+.tile.tile-0 {
+  background-image: none;
+}
+
+.tile.tile-1 {
+  background-position: -100px 0;
+}
+
+.tile.tile-2 {
+  background-position: -200px 0;
+}
+
+.tile.tile-3 {
+  background-position: 0 -100px;
+}
+
+.tile.tile-4 {
+  background-position: -100px -100px;
+}
+
+.tile.tile-5 {
+  background-position: -200px -100px;
+}
+
+.tile.tile-6 {
+  background-position: 0 -200px;
+}
+
+.tile.tile-7 {
+  background-position: -100px -200px;
+}
+
+.tile.tile-8 {
+  background-position: -200px -200px;
+}
+
+p {
+  margin: 0;
+}
+
+.reset {
+  margin-top: 1em;
+}

@@ -1,0 +1,29 @@
+﻿<ion-view>
+  <ion-content ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+
+    <div class="water-text-wrapper">
+      <div ng-hide="isInExibition">
+
+        <img src="img/high_res/Hotspot_17.jpg" alt="thumbnail"/>
+        <h1>Meereis, Diskobucht, Westgrönland</h1>
+        <p>Ein Mosaik aus unzähligen Eisschollen entsteht, wenn Seegang aufkommt und die Eisdecke auf dem Meer in der
+          Diskobucht zerbricht.</p>
+      </div>
+
+      <div class="hero clearfix" ng-show="isInExibition">
+        <img src="img/high_res/Hotspot_17.jpg">
+        <h1>Meereis, Diskobucht, Westgrönland</h1>
+      </div>
+
+      <h1>Schon gewusst?</h1>
+      <p>Seit 1979 wird der klimabedingte Rückgang des Meereises auf dem arktischen Ozean mit Hilfe von Satelliten
+        überwacht.</p>
+      <p>Im Sommer 2008 hatte sich die Meereisdecke am Nordpol erstmals soweit zurückgezogen, dass sowohl die Nordost-
+        als auch die Nordwestpassage im Prinzip schiffbar waren.</p>
+      <p>Modellrechnungen zufolge könnte der arktische Ozean in den nächsten 50 bis 70 Jahren im Sommer ganz eisfrei
+        sein.</p>
+
+    </div>
+
+  </ion-content>
+</ion-view>

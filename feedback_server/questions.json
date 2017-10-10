@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "pushNotification":{
+    "title": "Feedback",
+    "text": "Bitte bewerten sie unsere App"
+  },
+  "introMessageHTML": "<h4>Bitte geben Sie uns hier Feedback zur App</h4>",
+  "rewardMessageHTML": "<h4>Vielen Dank für Ihr Feedback!</h4>",
+  "showGeneralOpinion": true,
+  "questions": [
+    {
+      "text": "Wie bewerten Sie die Idee einer ausstellungsbegleitenden App?",
+      "showRating": true,
+      "showComment": true
+    },
+    {
+      "text": "Wie bewerten Sie die Benutzbarkeit der App Wasser?",
+      "showRating": true,
+      "showComment": true
+    },
+    {
+      "text": "Wie bewerten Sie die automatische Navigation innerhalb der Ausstellung?",
+      "showRating": true,
+      "showComment": true
+    }
+  ]
+}

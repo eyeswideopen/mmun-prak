@@ -1,0 +1,68 @@
+<ion-view   view-title="Feedback">
+  <ion-content ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+
+    <!-- loading feedback content-->
+    <div class="loading_spinner" ng-show="loading">
+      <ion-spinner></ion-spinner>
+    </div>
+
+
+    <!-- error message-->
+    <div ng-show="error">
+      <div class="water-text-wrapper feedbackMessageWrapper">
+        <h4>{{errorMessage}}</h4>
+        <button class="button button-block button-full feedbackButton" ng-click="reload()">Erneut versuchen</button>
+      </div>
+    </div>
+
+    <!-- Feedback already sent-->
+    <div ng-show="localNotif.feedbackSent">
+      <div class="water-text-wrapper feedbackMessageWrapper" ng-bind-html="rewardMessage">
+      </div>
+    </div>
+
+    <!-- questions -->
+    <div ng-hide="loading || error || localNotif.feedbackSent">
+      <div class="water-text-wrapper feedbackMessageWrapper" ng-bind-html="introMessage"></div>
+
+      <div ng-repeat="question in questions" class="question">
+        <h4>{{question.text}}</h4>
+        <rating ng-model="question.rate" max="question.max" ng-show="question.showRating"></rating>
+        <textarea class="explanation"
+                  placeholder="Anmerkungen..."
+                  ng-show="question.showComment"
+                  ng-model="question.explanation"
+                  maxlength="800"
+        ></textarea>
+      </div>
+
+
+      <div class="question">
+        <h4>Sonstige Anmerkungen und Verbesserungsvorschläge:</h4>
+        <textarea class="general_opinion explanation"
+                  placeholder="Anmerkungen..."
+                  ng-model="generalOpinion"
+                  maxlength="1000">
+
+        </textarea>
+      </div>
+
+      <div class="list contact">
+        <h4 style="text-align: center">Kontakt (Optional)</h4>
+        <label class="item item-input">
+          <input type="text" placeholder="Vorname" ng-model="contact.firstname" maxlength="40">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Nachname" ng-model="contact.lastname" maxlength="40">
+        </label>
+        <label class="item item-input">
+          <input type="text" placeholder="Email" ng-model="contact.email" maxlength="40">
+        </label>
+      </div>
+
+      <button class="button button-block button-full feedbackButton" ng-click="sendFeedback()">Feedback Abschicken</button>
+    </div>
+
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,74 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar-dark">
+      <ion-nav-back-button ng-hide="{{isInExibition}}">
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-dark ion-navicon" menu-toggle="right">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+
+
+
+    <!-- TEST -->
+    <ion-item
+      class="navigation-header item-thumbnail-left item-icon-right"
+      ng-show="!isInExibition && !beaconManager.shouldDisplayClosestState() &&  state.current.name  ==='app.intro'"
+      ng-click="closestBeaconIndex()"
+    >
+      {{state}}
+      <img src="{{hotspots[0].thumbnail}}">
+      <p>Nächster Hotspot:<br></p>
+      <span>{{hotspots[0].name}}</span>
+
+      <i class="icon ion-arrow-right-c"></i>
+    </ion-item>
+
+
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="right">
+    <ion-header-bar class="bar-dark">
+      <!--<h1 class="title">Menu</h1>-->
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item
+          menu-close
+          ng-show="isInExibition"
+          ng-click="liveClicked()"
+        >
+          <img src="img/dot.gif" class="dot">Live
+        </ion-item>
+        <ion-item
+          menu-close
+          href="#/app/gallery"
+          ng-hide="isInExibition"
+        >
+          Bildergallerie
+        </ion-item>
+
+        <ion-item nav-clear menu-close class="Feedback" href="#/app/feedback">
+          <span class="badge badge-assertive" ng-hide="localNotif.feedbackSent">1</span>
+          Feedback
+        </ion-item>
+
+        <ion-item
+          menu-close
+          ng-click="resetIntro()"
+        >
+          Einführung erneut starten
+        </ion-item>
+
+      </ion-list>
+    </ion-content>
+    <ion-footer-bar class="bar-dark">
+      <ion-item nav-clear menu-close class="impressum" href="#/app/impressum">Impressum</ion-item>
+    </ion-footer-bar>
+
+  </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,53 @@
+<ion-view>
+  <ion-content ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+    <div class="water-text-wrapper">
+
+      <div ng-hide="isInExibition">
+        <img src="img/high_res/Hotspot_04.jpg" alt="thumbnail"/>
+        <h1>Roebuck Bay, Westaustralien</h1>
+        <p>Blau und glasklar ist das Meer in der Roebuck Bay an der Westküste Australiens, wo tropische Temperaturen
+          herrschen. Bei Ebbe zieht sich das Meer soweit zurück, dass fast die Hälfte der Bucht trocken fällt. Dann
+          tritt der graublaue Schlick des Meeresbodens zutage.</p>
+      </div>
+
+      <!--Hero element only visible while in Esibition-->
+      <div class="hero clearfix" ng-show="isInExibition">
+        <img src="img/high_res/Hotspot_04.jpg">
+        <h1>Roebuck Bay, Westaustralien</h1>
+      </div>
+
+    </div>
+
+
+    <div class="water-text-wrapper">
+      <!--<img ng-src="img/high_res/tides.jpg" zoom-src="img/high_res/tides.jpg" zoom-view/>-->
+      <img ng-src="img/high_res/tides_thumb.png" ng-click="openModal()"/>
+
+      <p class="caption">Gezeiten über 4 Metern</p>
+
+    </div>
+
+
+    <script id="image-modal.html" type="text/ng-template">
+      <ion-modal-view  class="image-modal" ng-click="closeModal()">
+        <ion-scroll zooming="true"
+                    direction="xy"
+                    delegate-handle="zoom-pane"
+                    class="zoom-pane"
+                    min-zoom="1"
+                    scrollbar-x="false"
+                    scrollbar-y="false"
+                    overflow-scroll="false">
+          <img ng-src="img/high_res/tides.jpg" >
+        </ion-scroll>
+      </ion-modal-view>
+    </script>
+
+
+    <div class="water-text-wrapper">
+      <p>Gezeitenströmungen treten weltweit auf. Die Karte zeigt Küsten, deren Tidenhub größer als vier Meter ist. Zum
+        Vergleich: Der Tidenhub betragt an der Nordsee zwei bis drei Meter, an der Ostsee durchschnittlich nur 30
+        Zentimeter.</p>
+
+  </ion-content>
+</ion-view>
