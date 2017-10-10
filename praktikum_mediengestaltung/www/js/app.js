@@ -61,8 +61,6 @@ angular.module('water', ['ionic', 'ngCordova', 'ionic-audio', 'ionic-zoom-view',
         thumbnail: "img/high_res/Hotspot_11.jpg"
       });
 
-      console.log($rootScope.hotspots)
-
 
 
 
