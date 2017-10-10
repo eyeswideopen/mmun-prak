@@ -1,22 +1,18 @@
 angular.module('water').controller('menuController', function ($scope,
-                                                               waterAudio,
                                                                $ionicPopup,
-                                                               localNotif,
-                                                               beaconManager,
                                                                $state
 ) {
 
 
-  $scope.localNotif = localNotif;
 
-  $scope.beaconManager = beaconManager;
+  // $scope.beaconManager = beaconManager;
 
   $scope.state = $state;
 
 
-  $scope.closestBeaconIndex = function(){
-    beaconManager.navigateToClosestState();
-  }
+  // $scope.closestBeaconIndex = function(){
+  //   beaconManager.navigateToClosestState();
+  // }
 
   $scope.resetIntro = function(){
 

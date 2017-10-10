@@ -1,19 +1,14 @@
 ﻿<ion-view>
-  <ion-content ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+  <ion-content>
 
     <div class="water-text-wrapper">
-      <div ng-hide="isInExibition">
+      <div>
 
         <img src="img/high_res/Hotspot_16.jpg" alt="thumbnail"/>
         <h1>Lenadelta 01, Jakutien, Russland</h1>
         <p>Braunes Moorwasser füllt die zahlreichen Tümpel in dieser Tundralandschaft, die im Lauf des Jahres ihre Farbe
           wechselt. Im Winter ist sie weiß von Eis und Schnee, im Frühsommer, wenn Gräser, Kräuter und Moose wachsen,
           wird sie grün, und im Herbst, wenn die Vegetation abstirbt, wird sie ockerbraun.</p>
-      </div>
-      <!--Hero element only visible while in Esibition-->
-      <div class="hero clearfix" ng-show="isInExibition">
-        <img src="img/high_res/Hotspot_16.jpg">
-        <h1>Lenadelta 01, Jakutien, Russland</h1>
       </div>
     </div>
 

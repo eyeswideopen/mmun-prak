@@ -1,8 +1,8 @@
 ﻿<ion-view>
-  <ion-content ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+  <ion-content>
 
     <div class="water-text-wrapper">
-      <div ng-hide="isInExibition">
+      <div>
 
         <img src="img/high_res/Hotspot_10.jpg" alt="thumbnail"/>
         <h1>Vulkan Isluga, Anden, Chile</h1>
@@ -10,18 +10,12 @@
           erhebt sich über der graubraunen, kahlen Landschaft des Altiplano an der Grenze zwischen Nordchile und
           Bolivien.
           Er hat einen Durchmesser von 400 m.</p>
-
       </div>
 
-      <!--Hero element only visible while in Esibition-->
-      <div class="hero clearfix" ng-show="isInExibition">
-        <img src="img/high_res/Hotspot_10.jpg">
-        <h1>Vulkan Isluga, Anden, Chile</h1>
-      </div>
 
     </div>
 
-    <ion-audio-track track="myTrack" class="test water-audio" ng-show="audioAvailable">
+    <ion-audio-track track="myTrack" class="test water-audio">
       <div class="list list-inset">
         <div class="item item-thumbnail-left">
           <img src="{{myTrack.art}}">
@@ -37,10 +31,6 @@
         </div>
       </div>
     </ion-audio-track>
-    <div class="item item-thumbnail-left no-audio" ng-hide="audioAvailable">
-      <img src="img/mute.png">
-      <p>Audiokommentare sind in der Ausstellung nur mit angeschlossenen Kopfhöhrern verfügbar!</p>
-    </div>
 
     <div class="water-text-wrapper">
 

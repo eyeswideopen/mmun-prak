@@ -1,7 +1,7 @@
 /**
  * Created by maximiliankorner on 04/09/16.
  */
-angular.module('water').controller('13_HotspotController', function ($scope, waterAudio, MediaManager, $timeout) {
+angular.module('water').controller('13_HotspotController', function ($scope, $timeout) {
 
   $scope.right = function ($event) {
     if (!jQuery($event.target).hasClass("button_right_answer")) {

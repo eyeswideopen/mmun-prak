@@ -1,5 +1,5 @@
 ﻿<ion-view view-title="Bildergallerie" hide-back-button="true" can-swipe-back="false">
-  <ion-content  ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+  <ion-content>
     <ion-list>
       <ion-item class="item item-thumbnail-left" ng-repeat="hotspot in hotspots" ui-sref="{{hotspot.state}}">
         <img src="{{hotspot.thumbnail}}">

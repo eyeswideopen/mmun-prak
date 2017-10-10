@@ -1,19 +1,13 @@
 <ion-view>
-  <ion-content ng-class="{'closestStateVisible':!isInExibition && !beaconManager.shouldDisplayClosestState()}">
+  <ion-content>
     <div class="water-text-wrapper">
 
-      <div ng-hide="isInExibition">
+      <div>
         <img src="img/high_res/Hotspot_04.jpg" alt="thumbnail"/>
         <h1>Roebuck Bay, Westaustralien</h1>
         <p>Blau und glasklar ist das Meer in der Roebuck Bay an der Westküste Australiens, wo tropische Temperaturen
           herrschen. Bei Ebbe zieht sich das Meer soweit zurück, dass fast die Hälfte der Bucht trocken fällt. Dann
           tritt der graublaue Schlick des Meeresbodens zutage.</p>
-      </div>
-
-      <!--Hero element only visible while in Esibition-->
-      <div class="hero clearfix" ng-show="isInExibition">
-        <img src="img/high_res/Hotspot_04.jpg">
-        <h1>Roebuck Bay, Westaustralien</h1>
       </div>
 
     </div>

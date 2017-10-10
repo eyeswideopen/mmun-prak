@@ -61,6 +61,8 @@ angular.module('water', ['ionic', 'ngCordova', 'ionic-audio', 'ionic-zoom-view',
         thumbnail: "img/high_res/Hotspot_11.jpg"
       });
 
+      console.log($rootScope.hotspots)
+
 
 
 
@@ -92,15 +94,6 @@ angular.module('water', ['ionic', 'ngCordova', 'ionic-audio', 'ionic-zoom-view',
           'menuContent': {
             templateUrl: 'templates/impressum.html',
             controller: 'impressumController'
-          }
-        }
-      })
-      .state('app.feedback', {
-        url: '/feedback',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/feedback.html',
-            controller: 'feedbackController'
           }
         }
       })
